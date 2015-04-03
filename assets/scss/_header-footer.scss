@@ -1,0 +1,122 @@
+// -------------------------------------
+//   Header Footer
+// -------------------------------------
+// ----- Header Stylings
+// -------------------------------------
+
+header {
+	min-height: 75px;
+	background: $cream;
+	position: fixed;
+	width: 100%;
+	z-index: 1; 
+	
+}
+
+.l-desktop-header {
+	padding: 0;
+	
+	a {
+		width: 100%;
+		@include transition(all 0.2s ease-in-out);
+		@include grayscale-hover;
+	}
+	.l-header-logo {
+		padding: 0;
+		margin: 0;
+		text-indent: -9999px; 
+		float: left;
+		width: 200px;
+		height: 50px;
+		background: url("../img/logo.png");
+		@include bg-contain;
+		@include fade-hover;
+	}
+
+	nav {
+		float: right;
+		
+		ul li a {
+			@include underline-hover($primaryDark);
+		}
+	}
+	
+	@include media(max-width 768px, 6) {
+		display: none;
+	}
+}
+
+.l-mobile-header {
+	display: none;
+	padding: 0;
+	
+	.l-header-logo {
+		padding: 0;
+		margin: 0;
+		text-indent: -9999px; 
+		float: left;
+		width: 200px;
+		height: 50px;
+		background: url("../img/logo.png");
+		@include bg-contain;
+		@include grayscale-hover;
+	}
+	
+	@include media(max-width 768px, 6) {
+		display: block;
+	}
+}
+
+
+
+// -------------------------------------
+// ----- Footer Stylings
+// -------------------------------------
+
+footer {
+	min-height: 50px;
+	background: $cream;
+	// width: 100%;
+	// z-index: 1; 
+}
+
+.l-desktop-footer {
+	padding: 0;
+
+	nav {
+		float: right;
+		padding: 20px 0;
+		
+		ul {
+			li {
+				padding: 0 1em;
+				@include fade-hover;
+				
+				a {
+					color: $primaryDark;
+					text-transform: initial;
+					font-family: 'socicon';
+					font-size: 1.5em;
+					&:hover {
+						color: $secondaryDark;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+	
+	@include media(max-width 768px, 6) {
+		display: none;
+	}
+}
+
+.l-mobile-footer {
+	display: none;
+	padding: 0;
+	
+	@include media(max-width 768px, 6) {
+		display: block;
+	}
+}
+
