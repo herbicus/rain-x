@@ -8,7 +8,7 @@
 	padding-top: 82px;
 	height: 100vh;
 	position: relative;
-	background: url("../img/hero-bg.png")fixed;
+	background: url("../img/hero-bg.jpg")fixed;
 	@include bg-cover;
 	background-position: 50% 0; 
 }
@@ -26,6 +26,9 @@ section {
 
 .l-hero-content {
 	@include centerer;
+	left: 30%;
+	top: 20%;
+	opacity: 0;
 	width: 300px;
 	max-width: 300px;
 	height: 300px;

@@ -53,13 +53,7 @@ var cornerstoneAPI = (function(options) {
 
 		$(".l-hero-content").waypoint(function() {
 			heroContentParallax.seek(parallaxTiming);
-			console.log(parallaxTiming);
-			// TweenMax.to(".l-contact-bg" , 0.75, {
-			// 	left: "50%",
-			// 	top: "50%",
-			// 	autoAlpha: 1,
-			// 	ease: Back.easeInOut
-			// });
+			// console.log(parallaxTiming);
 
 		}, { offset: "90%" });
 	});
@@ -112,8 +106,14 @@ var cornerstoneAPI = (function(options) {
 
 	// init
 	var init = function() {
-		
+		TweenMax.to(".l-hero-content" , 0.75, {
+			left: "50%",
+			top: "50%",
+			autoAlpha: 1,
+			ease: Quad.easeInOut
+		});
 	};
+	
 	shared.init = init;
 
 	return shared;
