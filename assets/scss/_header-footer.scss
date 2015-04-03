@@ -115,6 +115,29 @@ footer {
 	display: none;
 	padding: 0;
 	
+	nav {
+		text-align: center;
+		padding: 20px 0;
+		
+		ul {
+			li {
+				padding: 0 1em;
+				@include fade-hover;
+				
+				a {
+					color: $primaryDark;
+					text-transform: initial;
+					font-family: 'socicon';
+					font-size: 1.5em;
+					&:hover {
+						color: $secondaryDark;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+	
 	@include media(max-width 768px, 6) {
 		display: block;
 	}
